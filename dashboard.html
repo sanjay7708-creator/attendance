@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supervisor Attendance System</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+<div class="container">
+
+    <div class="header">
+        <div>
+            <h2>KG Industrial Products</h2>
+            <p>Supervisor Attendance Management</p>
+        </div>
+        <div>
+            <h3 id="todayDate"></h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Work Details</h3>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="workDate">Date</label>
+                <input type="date" id="workDate">
+            </div>
+
+            <div class="form-group">
+                <label for="client">Client</label>
+                <select id="client">
+                    <option>SEPR Erode</option>
+                    <option>SEPR Palakkad</option>
+                    <option>Foxconn Chennai</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="site">Site</label>
+                <input type="text" id="site" placeholder="Enter Site">
+            </div>
+
+            <div class="form-group">
+                <label for="cleaningType">Cleaning Type</label>
+                <select id="cleaningType">
+                    <option>Wet Cleaning</option>
+                    <option>Dry Cleaning</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="permitType">Permit Type</label>
+                <select id="permitType">
+                    <option>Roof Work</option>
+                    <option>Electrical Work</option>
+                    <option>General Work</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="permitNumber">Permit Number</label>
+                <input type="text" id="permitNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="location">Roof / Location</label>
+                <input type="text" id="location">
+            </div>
+
+            <div class="form-group">
+                <label for="supervisor">Supervisor Name</label>
+                <input type="text" id="supervisor">
+            </div>
+
+            <div class="form-group">
+                <label for="waterBefore">Water Reading Before</label>
+                <input type="number" id="waterBefore">
+            </div>
+
+            <div class="form-group">
+                <label for="waterAfter">Water Reading After</label>
+                <input type="number" id="waterAfter">
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="workDetails">Work Details</label>
+            <textarea id="workDetails" placeholder="Enter Work Details"></textarea>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Employee Attendance</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Morning In</th>
+                    <th>Lunch Out</th>
+                    <th>Lunch In</th>
+                    <th>Evening Out</th>
+                    <th>Remarks</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="attendanceTable"></tbody>
+        </table>
+
+        <div class="actions">
+            <button type="button" class="addBtn" id="addRowBtn">+ Add Employee</button>
+            <button type="button" class="saveBtn" id="saveAttendanceBtn">Save Attendance</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
